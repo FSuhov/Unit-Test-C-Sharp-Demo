@@ -21,25 +21,17 @@ namespace UnitTestTutorial.UnitTests
 
         [TestMethod]
         public void CanBeDominated_DominatrixRatingIsBigger_ReturnsTrue()
-        {
-            // Arrange - nothing to arrange, the method is static
-
-            // Act
-            var result = GirlDriver.CanBeDominated(new Gladiatrix { Name = "Goldie Blair", IsQueen = false, CurrentRating = 8.01F }, new Gladiatrix { Name = "Amber Michaelle", IsQueen = false, CurrentRating = 5.55F });
-
-            // Assert
+        {            
+            var result = GirlDriver.CanBeDominated(new Gladiatrix { Name = "Goldie Blair", IsQueen = false, CurrentRating = 8.01F }, 
+                                                   new Gladiatrix { Name = "Amber Michaelle", IsQueen = false, CurrentRating = 5.55F });
             Assert.IsTrue(result);
         }
 
         [TestMethod]
         public void CanBeDominated_DominatrixRatingIsLower_ReturnsFalse()
-        {
-            // Arrange - nothing to arrange, the method is static
-
-            // Act
-            var result = GirlDriver.CanBeDominated(new Gladiatrix { Name = "Amber Michaelle", IsQueen = false, CurrentRating = 5.55F }, new Gladiatrix { Name = "Goldie Blair", IsQueen = false, CurrentRating = 8.01F });
-
-            // Assert
+        {            
+            var result = GirlDriver.CanBeDominated(new Gladiatrix { Name = "Amber Michaelle", IsQueen = false, CurrentRating = 5.55F }, 
+                                                   new Gladiatrix { Name = "Goldie Blair", IsQueen = false, CurrentRating = 8.01F });
             Assert.IsFalse(result);
         }
     }

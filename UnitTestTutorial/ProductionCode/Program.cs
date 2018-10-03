@@ -17,6 +17,11 @@ namespace ProductionCode
     {
         private static void Main(string[] args)
         {
+            Gladiatrix tanya = new Gladiatrix { Name = "Tanya Danielle", IsQueen = true, CurrentRating = 9.01F };
+            Gladiatrix goldie = new Gladiatrix { Name = "Goldie Blair", IsQueen = false, CurrentRating = 8.88F };
+            Gladiatrix amber = new Gladiatrix { Name = "Amber Michaelle", IsQueen = false, CurrentRating = 5.98F };
+
+            Console.WriteLine(GirlDriver.CanBeDominated(tanya, goldie));
         }
     }
 }
